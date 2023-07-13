@@ -13,6 +13,7 @@ import java.util.List;
 public class GetContact {
     @SuppressLint("Range")
     public List<NumberUtil> getAllContacts(ArrayList<NumberUtil> numberUtils, FragmentActivity context) {
+        /* at first add this permission in manifest  <uses-permission android:name="android.permission.READ_CONTACTS" /> */
         ContentResolver cr =context.getContentResolver();
         Cursor cur = cr.query(ContactsContract.Contacts.CONTENT_URI,
                 null, null, null, null);
